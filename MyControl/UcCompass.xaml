@@ -1,0 +1,717 @@
+﻿<UserControl x:Class="ZMCL.MyControl.UcCompass"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZMCL.MyControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="310" d:DesignWidth="310">
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Line}">
+            <Setter Property="Stroke" Value="White"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid >
+        <Ellipse Width="308" Height="308" StrokeThickness="5" Stroke="#FF939393" />
+        <Canvas Margin="5,5,0,0">
+            
+            <Grid Width="300" Height="300" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-10"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                
+                <Ellipse StrokeThickness="15" >
+                    <Ellipse.Stroke>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFC1C1C1" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Stroke>
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF8B0303" Offset="0.857"/>
+                            <GradientStop Color="#FFD3930C" Offset="0.181"/>
+                            <GradientStop Color="#FF865D05" Offset="0.016"/>
+                            <GradientStop Color="Black" Offset="0.989"/>
+                        </RadialGradientBrush>
+
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="Green" />
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF009400"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="4"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF00A600"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="8"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF00B400"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="12"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF36B000"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="16"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FF3BBC02"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="20"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF49BC02"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="24"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF4ECB00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="28"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF5CCB00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="32"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF7BEA00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="36"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FF84FA00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="40"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FF9FFA00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="44"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFB1FA00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="48"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFB1FA00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="52"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFBDFF00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="56"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFBDFF00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="60"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFC3FF16"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="64"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFD9FF00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="68"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFDBFF0D"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="72"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFD3E502"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="76"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFEBFF00"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="80"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFE8FA0E"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="84"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFEAF935"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="88"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFD1E01E"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="92"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFE4DE25"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="96"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFFFF937"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="100"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFDFD909"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="104"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFEAE314"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="108"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFFE337"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="112"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFADA13"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="116"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFFFE500"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFFCC4A"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="124"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFF9C02E"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="128"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFABC1E"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="132"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFCB707"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="136"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFFFC000"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="140"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFF9B751"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="144"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFCA349"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="148"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFF8230"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="152"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFC761F"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="156"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFFF6500"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="160"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFF5E31"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="164"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFD4D1C"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="168"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFC4613"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="172"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFF410B"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="176"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="#FFFF4900"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFF9402A"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="184"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="Red"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="188"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFF3030"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="192"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+                <Line X1="67" X2="80" Y1="150" Y2="150" Stroke="#FFFF1919"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="196"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="60" X2="80" Y1="150" Y2="150" Stroke="Red"  >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="200"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+            </Grid>
+            <Grid Width="300" Height="300">
+
+                <Line X1="58" X2="80" Y1="150" Y2="150" RenderTransformOrigin="0.5,0.5" >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-40"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+                <Line X1="58" X2="80" Y1="150" Y2="150" RenderTransformOrigin="0.5,0.5" >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-60"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="58" X2="80" Y1="150" Y2="150" RenderTransformOrigin="0.5,0.5" >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-80"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="58" X2="80" Y1="150" Y2="150" RenderTransformOrigin="0.5,0.5" >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-100"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="58" X2="80" Y1="150" Y2="150" RenderTransformOrigin="0.5,0.5" >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+
+                <Line X1="58" X2="80" Y1="150" Y2="150" RenderTransformOrigin="0.5,0.5" >
+                    <Line.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-140"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Line.RenderTransform>
+                </Line>
+
+            </Grid>
+
+            <Polygon x:Name="MainCursor"
+                Points="-5,30 0,-55 5,30 -5,30" 
+                StrokeThickness="2" 
+                Canvas.Left="150" 
+                Canvas.Top="150" 
+                Stroke="White" 
+                Panel.ZIndex="1">
+                <Polygon.Fill>
+                    <SolidColorBrush Color="#FF001FFF" Opacity="0.4"/>
+                </Polygon.Fill>
+            </Polygon>
+
+            <Polygon x:Name="DetailCursor"
+                Points="-5,120 -5,110 0,100 5,110 5,120, -5,120" 
+                StrokeThickness="2" 
+                Canvas.Left="150" 
+                Canvas.Top="150" 
+                Stroke="White" 
+                Panel.ZIndex="1" RenderTransformOrigin="0,0">
+                <Polygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="50"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Polygon.RenderTransform>
+                <Polygon.Fill>
+                    <SolidColorBrush Color="#FF001FFF" Opacity="0.4"/>
+                </Polygon.Fill>
+            </Polygon>
+
+            <Ellipse 
+                Canvas.Left="135" 
+                Canvas.Top="135" 
+                Width="30" 
+                Height="30" 
+                Panel.ZIndex="0" StrokeThickness="2">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFB0ADAD"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <Ellipse Canvas.Left="142" Canvas.Top="142" Width="16" Height="16" Panel.ZIndex="2" >
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFBFBFBF" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <TextBlock Text="0" Canvas.Left="41" Canvas.Top="155"/>
+            <TextBlock Text="10" Canvas.Left="33" Canvas.Top="120"/>
+            <TextBlock Text="20" Canvas.Left="45" Canvas.Top="84"/>
+            <TextBlock Text="30" Canvas.Left="69" Canvas.Top="58"/>
+            <TextBlock Text="40" Canvas.Left="100" Canvas.Top="40"/>
+            <TextBlock Text="50" Canvas.Left="139" Canvas.Top="33"/>
+            <TextBlock Text="60" Canvas.Left="174" Canvas.Top="40"/>
+            <TextBlock Text="70" Canvas.Left="209" Canvas.Top="58"/>
+            <TextBlock Text="80" Canvas.Left="232" Canvas.Top="84"/>
+            <TextBlock Text="90" Canvas.Left="244" Canvas.Top="120"/>
+            <TextBlock Text="100" Canvas.Left="242" Canvas.Top="155" Width="40"/>
+        </Canvas>
+    </Grid>
+</UserControl>

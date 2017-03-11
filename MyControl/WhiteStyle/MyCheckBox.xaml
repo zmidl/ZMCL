@@ -1,0 +1,167 @@
+﻿<CheckBox x:Class="ZMCL.MyControl.WhiteStyle.MyCheckBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZMCL.MyControl.WhiteStyle"
+             mc:Ignorable="d" 
+             d:DesignHeight="54" d:DesignWidth="104">
+    <CheckBox.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="OptionMark.Static.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="OptionMark.Static.Border" Color="#FF707070"/>
+        <Style x:Key="OptionMarkFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Background" Color="#FFF3F9FF"/>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="#FF5593FF"/>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="OptionMark.Disabled.Background" Color="#FFE6E6E6"/>
+        <SolidColorBrush x:Key="OptionMark.Disabled.Border" Color="#FFBCBCBC"/>
+        <SolidColorBrush x:Key="OptionMark.Disabled.Glyph" Color="#FF707070"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Background" Color="#FFD9ECFF"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="#FF3C77DD"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="OptionMark.Static.Glyph" Color="#FF212121"/>
+    </CheckBox.Resources>
+    <CheckBox.Style>
+        <Style TargetType="{x:Type CheckBox}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Background" Value="{StaticResource OptionMark.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource OptionMark.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid x:Name="templateRoot"  SnapsToDevicePixels="True">
+                            <Canvas Margin="2">
+                                <Rectangle x:Name="FatherRectangle" Stroke="#FF939393" Width="100" Height="50" RadiusX="25" RadiusY="25"  StrokeThickness="1" >
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFC1C1C1" Offset="1"/>
+                                            <GradientStop Color="White"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+
+                                </Rectangle>
+                                <Rectangle x:Name="ChildRectangle" Height="34" RadiusX="17" RadiusY="17" StrokeThickness="1" Width="84" Canvas.Left="8" Canvas.Top="8">
+                                    <Rectangle.Stroke>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF6A6A6A" Offset="1"/>
+                                            <GradientStop Color="#FFB4B4B4"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Stroke>
+                                    <Rectangle.Effect>
+                                        <DropShadowEffect x:Name="ButtonEffect" BlurRadius="3" Direction="250" Color="#FFCFCFCF"/>
+                                    </Rectangle.Effect>
+
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFE7E7E7"/>
+                                            <GradientStop Color="White" Offset="0.26"/>
+                                            <GradientStop Color="#FF828282" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+
+                                <Rectangle x:Name="ButtonRectangle" Width="76" Height="32" RadiusX="16" RadiusY="16" Stroke="White" Canvas.Left="15" Canvas.Top="9">
+
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                            <GradientStop Color="#FFBBBBBB" Offset="0.997"/>
+                                            <GradientStop Color="#FFC7C7C7" Offset="0.514"/>
+                                            <GradientStop Color="#FFD4D4D4" Offset="0.5"/>
+                                            <GradientStop Color="WhiteSmoke" Offset="0.1"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock x:Name="On_tblk"  Text="开" 
+                                           Width="21" Foreground="#FF858585" FontSize="20"
+                                           FontFamily="Microsoft YaHei" FontWeight="Bold" Canvas.Left="26" Canvas.Top="11" />
+                                <TextBlock 
+                                    x:Name="Off_tblk" 
+                                    Text="关"  Width="21"  Foreground="#FFCF2C00" 
+                                    FontSize="20" FontFamily="Microsoft YaHei" 
+                                    FontWeight="Bold" Canvas.Left="60" Canvas.Top="11" />
+                            </Canvas>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasContent" Value="true">
+                                <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}"/>
+                                <Setter Property="Padding" Value="4,-1,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="Off_tblk" Property="Foreground" Value="#FF858585"/>
+                                <Setter TargetName="On_tblk" Property="Foreground" Value="#FF008BFF"/>
+                                <Setter TargetName="ButtonRectangle" Property="Canvas.Left" Value="9"/>
+                                <Setter TargetName="On_tblk" Property="Canvas.Left" Value="20"/>
+                                <Setter TargetName="Off_tblk" Property="Canvas.Left" Value="54"/>
+                                <Setter TargetName="ChildRectangle" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="3" Direction="-50" Color="#FFCFCFCF"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName ="ButtonRectangle" Property="Rectangle.Fill" >
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                            <GradientStop Color="#FFBBBBBB" Offset="0.003"/>
+                                            <GradientStop Color="#FFC7C7C7" Offset="0.486"/>
+                                            <GradientStop Color="#FFD4D4D4" Offset="0.5"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="{x:Null}">
+                                <Setter TargetName="Off_tblk" Property="Foreground" Value="#FFCF2C00"/>
+                                <Setter TargetName="On_tblk" Property="Foreground" Value="#FF008BFF"/>
+                                <Setter TargetName="ButtonRectangle" Property="Canvas.Left" Value="15"/>
+                                <Setter TargetName="On_tblk" Property="Canvas.Left" Value="26"/>
+                                <Setter TargetName="Off_tblk" Property="Canvas.Left" Value="60"/>
+                                <Setter TargetName="ChildRectangle" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="3" Direction="250" Color="#FFCFCFCF"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName ="ButtonRectangle" Property="Rectangle.Fill" >
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                            <GradientStop Color="#FFBBBBBB" Offset="0.997"/>
+                                            <GradientStop Color="#FFC7C7C7" Offset="0.514"/>
+                                            <GradientStop Color="#FFD4D4D4" Offset="0.5"/>
+                                            <GradientStop Color="WhiteSmoke" Offset="0.1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </CheckBox.Style>
+</CheckBox>
